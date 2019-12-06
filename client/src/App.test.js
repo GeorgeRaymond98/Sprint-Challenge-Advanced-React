@@ -1,9 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from "@testing-library/react";
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+import PlayerCard from './Components/PlayerCard';
+
+test('renders without crashing', () => {
+  render(<App />);
 });
+
+test("country Name is rendring ", () => {
+  const{ getByText } = render(<PlayerCard/>);
+  getByText(/country/i);
+})
