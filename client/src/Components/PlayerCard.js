@@ -4,9 +4,10 @@ import React from 'react'
 function PlayerCard (props) {
 
     return (
-    <div >
-        <h1>Name: {props.player.name}</h1>
-        <h2>Country:{props.player.country}</h2>
+    <div>
+        <span>Randome test</span>
+        <h2>Name: {props.player.name}</h2>
+        <h3>Country:{props.player.country}</h3>
         <p>{props.player.searches}</p> 
     </div>
     )

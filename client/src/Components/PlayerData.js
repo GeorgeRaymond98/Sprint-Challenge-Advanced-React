@@ -1,10 +1,10 @@
 import React from "react";
 import PlayerCard from "./PlayerCard";
 
-function PlayerData (props) {
+function PlayerData ({players}) {
     return(
     <div >
-        {props.players.map(player => 
+        {players.map(player => 
             <PlayerCard  player={player} />
         )}
     </div>
