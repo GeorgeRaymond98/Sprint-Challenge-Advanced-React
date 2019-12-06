@@ -1,11 +1,9 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios'
-import PlayerData from './Components/PlayerData'
+import PlayerData from './Components/PlayerData';
+import { loginUser } from "./Hooks/useInputValue";
 
-export const getByTest =()=>{
-
-}
 class App extends React.Component {
 
   constructor() {
@@ -15,15 +13,15 @@ class App extends React.Component {
     }
   }
 
-  
+
 
 
   componentDidMount() {
     axios
     .get('http://localhost:5000/api/players' )
-     .then(res => {
-      //  console.log("Please work" , res.data)
-       this.setState({players: res.data})
+     .then(response => {
+      //  console.log("Please work" , response.data)
+       this.setState({players: response.data})
      })
      .catch(error => console.log('Catch error', error))
   }
