@@ -2,8 +2,6 @@ import React from 'react';
 import './App.css';
 import axios from 'axios'
 import PlayerData from './Components/PlayerData';
-import { loginUser } from "./Hooks/useInputValue";
-
 class App extends React.Component {
 
   constructor() {
@@ -30,10 +28,14 @@ class App extends React.Component {
 
   render () {
   return (
+    <>
+    {/* <UselocalStorage/> */}
     <div className="App">
       <h1>Women's World Cup players</h1>
       <PlayerData players={this.state.players} />
     </div>
+    
+    </>
    );
   } 
 }
